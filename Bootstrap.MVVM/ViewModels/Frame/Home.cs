@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bootstrap.ViewModels.Frame
+namespace Bootstrap.MVVM.ViewModels.Frame
 {
-  public  class Home
+  public  class Home: BaseVM
     {
     }
 }

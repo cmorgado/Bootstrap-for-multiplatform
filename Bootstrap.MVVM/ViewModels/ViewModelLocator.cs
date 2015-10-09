@@ -2,7 +2,7 @@
 using GalaSoft.MvvmLight.Views;
 using Microsoft.Practices.ServiceLocation;
 
-namespace Bootstrap.ViewModels
+namespace Bootstrap.MVVM.ViewModels
 {
     public class ViewModelLocator
     {
