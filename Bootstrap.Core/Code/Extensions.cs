@@ -44,8 +44,7 @@ namespace Bootstrap.Core.Code
             try
             {
                 if (objectToSave == null) return null;
-                var st = new JsonSerializerSettings();
-                st.StringEscapeHandling = StringEscapeHandling.EscapeHtml;
+                var st = new JsonSerializerSettings {StringEscapeHandling = StringEscapeHandling.EscapeHtml};
                 return JsonConvert.SerializeObject(objectToSave, Formatting.None, st);
             }
             catch (Exception ex)
@@ -65,7 +64,7 @@ namespace Bootstrap.Core.Code
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
-                throw ex;
+                throw;
             }
         }
     }

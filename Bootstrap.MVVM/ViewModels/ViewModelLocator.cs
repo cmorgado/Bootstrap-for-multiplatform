@@ -21,13 +21,6 @@ namespace Bootstrap.MVVM.ViewModels
 
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "This non-static member is needed for data binding purposes.")]
-        public ViewModels.Frame.Home Home
-        {
-            get
-            {
-                return ServiceLocator.Current.GetInstance<ViewModels.Frame.Home>();
-            }
-        }
-
+        public ViewModels.Frame.Home Home => ServiceLocator.Current.GetInstance<ViewModels.Frame.Home>();
     }
 }

@@ -24,15 +24,10 @@ namespace Bootstrap.XForms
           //  Locator.nav.Initialize(firstPage);
         }
 
-        static MVVM.ViewModels.ViewModelLocator _locator;
+        static ViewModelLocator _locator;
 
-        public static MVVM.ViewModels.ViewModelLocator Locator
-        {
-            get
-            {
-                return _locator ?? (_locator = new MVVM.ViewModels.ViewModelLocator());
-            }
-        }
+        public static ViewModelLocator Locator => _locator ?? (_locator = new MVVM.ViewModels.ViewModelLocator());
+
         protected override void OnStart()
         {
             // Handle when your app starts

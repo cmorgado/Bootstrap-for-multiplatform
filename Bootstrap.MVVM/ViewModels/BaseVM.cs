@@ -19,11 +19,9 @@ namespace Bootstrap.MVVM.ViewModels
             get { return this._InternetConnection; }
             set
             {
-                if (_InternetConnection != value)
-                {
-                    _InternetConnection = value;
-                    NotifyPropertyChanged();
-                }
+                if (_InternetConnection == value) return;
+                _InternetConnection = value;
+                NotifyPropertyChanged();
             }
         }
 
@@ -34,11 +32,9 @@ namespace Bootstrap.MVVM.ViewModels
             get { return this._IsLogged; }
             set
             {
-                if (_IsLogged != value)
-                {
-                    _IsLogged = value;
-                    NotifyPropertyChanged();
-                }
+                if (_IsLogged == value) return;
+                _IsLogged = value;
+                NotifyPropertyChanged();
             }
         }
 
@@ -52,11 +48,9 @@ namespace Bootstrap.MVVM.ViewModels
             get { return this._PageTitle; }
             set
             {
-                if (_PageTitle != value)
-                {
-                    _PageTitle = value;
-                    NotifyPropertyChanged();
-                }
+                if (_PageTitle == value) return;
+                _PageTitle = value;
+                NotifyPropertyChanged();
             }
         }
 

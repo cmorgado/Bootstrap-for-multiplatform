@@ -4,22 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bootstrap.Code
+namespace Bootstrap.Core.Code
 {
     public class SuperApp
     {
         static SuperApp _instance = null;
-        public static SuperApp Instance
-        {
-            get
-            {
-
-                if (_instance == null)
-                {
-                    _instance = new SuperApp();
-                }
-                return _instance;
-            }
-        }
+        public static SuperApp Instance => _instance ?? (_instance = new SuperApp());
     }
 }

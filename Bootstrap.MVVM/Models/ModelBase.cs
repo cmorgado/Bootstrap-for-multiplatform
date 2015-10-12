@@ -13,19 +13,15 @@ namespace Bootstrap.MVVM.Models
         public event PropertyChangedEventHandler PropertyChanged;
         public void NotifyPropertyChanged([CallerMemberName]String propertyName = null)
         {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (null != handler)
+            var handler = PropertyChanged;
+            if (null == handler) return;
+            try
             {
-                try
-                {
-                    handler(this, new PropertyChangedEventArgs(propertyName));
-                }
-                catch
-                {
-
-
-                }
-
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+            catch
+            {
+                // ignored
             }
         }
     }

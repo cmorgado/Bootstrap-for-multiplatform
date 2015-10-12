@@ -25,14 +25,7 @@ namespace Bootstrap.MVVM.ViewModels
                 if (loadingCounter < 0)
                     loadingCounter = 0;
 
-                if (loadingCounter > 0)
-                {
-                    IsLoading = true;
-                }
-                else
-                {
-                    IsLoading = false;
-                }
+                IsLoading = loadingCounter > 0;
             }
         }
 
