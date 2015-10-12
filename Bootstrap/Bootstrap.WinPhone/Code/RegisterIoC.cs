@@ -1,19 +1,16 @@
 ﻿using GalaSoft.MvvmLight.Ioc;
-using GalaSoft.MvvmLight.Views;
-using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace Bootstrap.Common.Code
 {
-    public static class Bootstrap
+    public static class RegisterIoC
     {
         public static void Run()
         {
            
-            SimpleIoc.Default.Register<IDialogService, DialogService>();
+            SimpleIoc.Default.Register<GalaSoft.MvvmLight.Views.IDialogService, GalaSoft.MvvmLight.Views.DialogService>();
             SimpleIoc.Default.Register<Core.Interfaces.IPlatform, PlatformSpecific.Services.PlatformService>();
-            SimpleIoc.Default.Register<MVVM.Interfaces.INavigationService, XForms.Services.NavigationService>();
+            SimpleIoc.Default.Register<MVVM.Interfaces.INavigationService, Bootstrap.XForms.Services.NavigationService>();
 
         }
     }

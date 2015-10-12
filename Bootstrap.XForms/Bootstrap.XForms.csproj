@@ -103,6 +103,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Bootstrap.Business\Bootstrap.Business.csproj">
+      <Project>{1420fc53-49a3-46c0-a32f-c7c08583923f}</Project>
+      <Name>Bootstrap.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Bootstrap.Core\Bootstrap.Core.csproj">
       <Project>{be553bc7-2dcf-43c9-9a14-6d9273858bbb}</Project>
       <Name>Bootstrap.Core</Name>
@@ -110,6 +114,10 @@
     <ProjectReference Include="..\Bootstrap.MVVM\Bootstrap.MVVM.csproj">
       <Project>{eb85bf15-82a3-4220-9a81-073e130bc45c}</Project>
       <Name>Bootstrap.MVVM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bootstrap.REST\Bootstrap.REST.csproj">
+      <Project>{fab5e5ba-0f73-4c57-9e49-c4a96e3e1ec8}</Project>
+      <Name>Bootstrap.REST</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

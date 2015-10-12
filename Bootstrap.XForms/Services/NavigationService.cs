@@ -7,13 +7,12 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using Bootstrap.MVVM.Interfaces;
 
 
-namespace Bootstrap.Services.XForms
+namespace Bootstrap.XForms.Services
 {
 
-    public class NavigationService : INavigationService
+    public class NavigationService : MVVM.Interfaces.INavigationService
     {
         private readonly Dictionary<string, Type> _pagesByKey = new Dictionary<string, Type>();
         private NavigationPage _navigation;

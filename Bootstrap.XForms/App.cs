@@ -1,9 +1,9 @@
-﻿using Bootstrap.MVVM.ViewModels;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Bootstrap.MVVM.ViewModels;
 using Xamarin.Forms;
 
 namespace Bootstrap.XForms
@@ -24,13 +24,13 @@ namespace Bootstrap.XForms
           //  Locator.nav.Initialize(firstPage);
         }
 
-        static ViewModelLocator _locator;
+        static MVVM.ViewModels.ViewModelLocator _locator;
 
-        public static ViewModelLocator Locator
+        public static MVVM.ViewModels.ViewModelLocator Locator
         {
             get
             {
-                return _locator ?? (_locator = new ViewModelLocator());
+                return _locator ?? (_locator = new MVVM.ViewModels.ViewModelLocator());
             }
         }
         protected override void OnStart()
