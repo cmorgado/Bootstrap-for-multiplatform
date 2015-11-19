@@ -1,11 +1,9 @@
 ﻿
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+using Bootstrap.MVVM.Interfaces;
 using Xamarin.Forms;
 
 
@@ -37,6 +35,9 @@ namespace Bootstrap.XForms.Services
             }
         }
 
+        private object _parameters;
+      
+
         public void GoBack()
         {
             _navigation.PopAsync();
@@ -49,41 +50,25 @@ namespace Bootstrap.XForms.Services
 
         public void NavigateTo(string pageKey, object parameter)
         {
+
+           
             lock (_pagesByKey)
             {
                 if (_pagesByKey.ContainsKey(pageKey))
                 {
                     var type = _pagesByKey[pageKey];
-                    ConstructorInfo constructor;
-                    object[] parameters;
 
-                    if (parameter == null)
+
+                    _parameters = parameter;
+                    var constructor = type.GetTypeInfo()
+                        .DeclaredConstructors
+                        .FirstOrDefault();
+
+                    var parameters = new object[]
                     {
-                        constructor = type.GetTypeInfo()
-                            .DeclaredConstructors
-                            .FirstOrDefault(c => !c.GetParameters().Any());
+                    };
 
-                        parameters = new object[]
-                        {
-                        };
-                    }
-                    else
-                    {
-                        constructor = type.GetTypeInfo()
-                            .DeclaredConstructors
-                            .FirstOrDefault(
-                                c =>
-                                {
-                                    var p = c.GetParameters();
-                                    return p.Count() == 1
-                                           && p[0].ParameterType == parameter.GetType();
-                                });
-
-                        parameters = new[]
-                        {
-                            parameter
-                        };
-                    }
+                   
 
                     if (constructor == null)
                     {
@@ -121,6 +106,23 @@ namespace Bootstrap.XForms.Services
         public void Initialize(NavigationPage navigation)
         {
             _navigation = navigation;
+        }
+
+        public void NavigateToModal(string pageKey)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void NavigateToModal(string pageKey, object parameter)
+        {
+            throw new NotImplementedException();
+        }
+
+       
+
+        object INavigationService.Parameters()
+        {
+            return _parameters;
         }
     }
 

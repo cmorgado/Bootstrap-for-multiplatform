@@ -7,6 +7,8 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Bootstrap.WinPhone.Resources;
+using GalaSoft.MvvmLight.Ioc;
+using Microsoft.Practices.ServiceLocation;
 
 namespace Bootstrap.WinPhone
 {
@@ -36,6 +38,13 @@ namespace Bootstrap.WinPhone
             InitializeLanguage();
 
             // Show graphics profiling information while debugging.
+
+
+            ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
+                Code.RegisterPagesNavigation.Run();
+            Common.Code.RegisterIoC.Run();
+        
+
             if (Debugger.IsAttached)
             {
                 // Display the current frame rate counters.

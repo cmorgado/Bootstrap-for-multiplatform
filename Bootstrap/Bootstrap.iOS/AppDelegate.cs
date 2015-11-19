@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
+﻿using Foundation;
+using GalaSoft.MvvmLight.Ioc;
+using Microsoft.Practices.ServiceLocation;
 using UIKit;
 
 namespace Bootstrap.iOS
@@ -23,6 +21,12 @@ namespace Bootstrap.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+
+            ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
+            Common.Code.RegisterIoC.Run();
+            Code.RegisterPagesNavigation.Run();
+
             LoadApplication(new XForms.App());
 
             return base.FinishedLaunching(app, options);

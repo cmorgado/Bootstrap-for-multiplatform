@@ -4,36 +4,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Bootstrap.MVVM.Interfaces;
 
 namespace Bootstrap.MVVM.ViewModels
 {
     public class BaseVM : BaseWithProgress
     {
 
-        public GalaSoft.MvvmLight.Views.INavigationService _navigationService;
-        public Core.Interfaces.IPlatform _platform;
+        public readonly INavigationService _navigationService;
+        public Core.Interfaces.IPlatform Platform;
 
-        bool _InternetConnection = true;
+        bool _internetConnection = true;
         public bool InternetConnection
         {
-            get { return this._InternetConnection; }
+            get { return this._internetConnection; }
             set
             {
-                if (_InternetConnection == value) return;
-                _InternetConnection = value;
+                if (_internetConnection == value) return;
+                _internetConnection = value;
                 NotifyPropertyChanged();
             }
         }
 
 
-        bool _IsLogged = false;
+        bool _isLogged = false;
         public bool IsLogged
         {
-            get { return this._IsLogged; }
+            get { return this._isLogged; }
             set
             {
-                if (_IsLogged == value) return;
-                _IsLogged = value;
+                if (_isLogged == value) return;
+                _isLogged = value;
                 NotifyPropertyChanged();
             }
         }
@@ -42,14 +43,14 @@ namespace Bootstrap.MVVM.ViewModels
 
 
 
-        string _PageTitle;
+        string _pageTitle;
         public string PageTitle
         {
-            get { return this._PageTitle; }
+            get { return this._pageTitle; }
             set
             {
-                if (_PageTitle == value) return;
-                _PageTitle = value;
+                if (_pageTitle == value) return;
+                _pageTitle = value;
                 NotifyPropertyChanged();
             }
         }
@@ -127,21 +128,13 @@ namespace Bootstrap.MVVM.ViewModels
 
         }
 
-
-        public BaseVM()
-        {
-
-        }
-
-
-
-
-        public BaseVM(GalaSoft.MvvmLight.Views.INavigationService navigation, Core.Interfaces.IPlatform platform
+        
+        public BaseVM(INavigationService navigation, Core.Interfaces.IPlatform platform
 
           )
         {
             _navigationService = navigation;
-            _platform = platform;
+            Platform = platform;
 
         }
 

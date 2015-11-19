@@ -1,9 +1,6 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Bootstrap.MVVM.Interfaces;
 using Bootstrap.MVVM.ViewModels;
+using GalaSoft.MvvmLight.Ioc;
 using Xamarin.Forms;
 
 namespace Bootstrap.XForms
@@ -21,12 +18,13 @@ namespace Bootstrap.XForms
             };
             MainPage = firstPage;
 
-          //  Locator.nav.Initialize(firstPage);
+            var nav = (Services.NavigationService) SimpleIoc.Default.GetInstance<INavigationService>();
+            nav.Initialize(firstPage);
         }
 
         static ViewModelLocator _locator;
 
-        public static ViewModelLocator Locator => _locator ?? (_locator = new MVVM.ViewModels.ViewModelLocator());
+        public static ViewModelLocator Locator => _locator ?? (_locator = new ViewModelLocator());
 
         protected override void OnStart()
         {

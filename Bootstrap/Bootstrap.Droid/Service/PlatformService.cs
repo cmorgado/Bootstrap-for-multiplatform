@@ -1,77 +1,22 @@
-﻿
-using Bootstrap.Core.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using Android.Provider;
 
 namespace Bootstrap.PlatformSpecific.Services
 {
-    public class PlatformService : Bootstrap.Core.Interfaces.IPlatform
+    public class PlatformService : Core.Interfaces.IPlatform
     {
-        public string AppName
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public string AppName => "Boostrap APP";
+        public string AppVersion => Xamarin.Forms.Forms.Context.PackageManager.GetPackageInfo(Xamarin.Forms.Forms.Context.PackageName, 0).VersionName;
 
-        public string appVersion
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public string DeviceId => Settings.Secure.GetString(Xamarin.Forms.Forms.Context.ContentResolver, Settings.Secure.AndroidId);
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public string DeviceName => "[" + Android.OS.Build.Device + "]" + "[" + Android.OS.Build.Model + "]";
 
-        public string deviceID
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public string OsName => "Android";
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public string OsVersion => Android.OS.Build.VERSION.Release;
 
-        public string deviceName
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string OSName
-        {
-            get
-            {
-                return "Droid";
-            }
-        }
-
-        public string OSVersion
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         public string xAuthKey
         {

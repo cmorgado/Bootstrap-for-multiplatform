@@ -10,7 +10,7 @@ namespace Bootstrap.Common.Code
            
             SimpleIoc.Default.Register<GalaSoft.MvvmLight.Views.IDialogService, GalaSoft.MvvmLight.Views.DialogService>();
             SimpleIoc.Default.Register<Core.Interfaces.IPlatform, PlatformSpecific.Services.PlatformService>();
-            SimpleIoc.Default.Register<MVVM.Interfaces.INavigationService, Bootstrap.XForms.Services.NavigationService>();
+       
 
         }
     }

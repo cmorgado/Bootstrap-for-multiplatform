@@ -1,10 +1,4 @@
-﻿
-using Bootstrap.Core.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace Bootstrap.PlatformSpecific.Services
 {
@@ -18,7 +12,7 @@ namespace Bootstrap.PlatformSpecific.Services
             }
         }
 
-        public string appVersion
+        public string AppVersion
         {
             get
             {
@@ -31,7 +25,7 @@ namespace Bootstrap.PlatformSpecific.Services
             }
         }
 
-        public string deviceID
+        public string DeviceId
         {
             get
             {
@@ -44,7 +38,7 @@ namespace Bootstrap.PlatformSpecific.Services
             }
         }
 
-        public string deviceName
+        public string DeviceName
         {
             get
             {
@@ -57,7 +51,7 @@ namespace Bootstrap.PlatformSpecific.Services
             }
         }
 
-        public string OSName
+        public string OsName
         {
             get
             {
@@ -65,7 +59,7 @@ namespace Bootstrap.PlatformSpecific.Services
             }
         }
 
-        public string OSVersion
+        public string OsVersion
         {
             get
             {

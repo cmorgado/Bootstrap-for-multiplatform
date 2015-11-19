@@ -7,7 +7,14 @@ using System.Threading.Tasks;
 
 namespace Bootstrap.MVVM.Interfaces
 {
-  public  interface INavigationService : GalaSoft.MvvmLight.Views.INavigationService
+    public interface INavigationService : GalaSoft.MvvmLight.Views.INavigationService
     {
+        void NavigateToModal(string pageKey);
+        void NavigateToModal(string pageKey, object parameter);
+
+        object Parameters();
+
+
+
     }
 }

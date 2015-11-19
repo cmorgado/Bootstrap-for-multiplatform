@@ -1,42 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bootstrap.MVVM.ViewModels
+﻿namespace Bootstrap.MVVM.ViewModels
 {
     public class BaseWithProgress : Models.ModelBase
     {
-
-
-        int loadingCounter = 0;
+        private int _loadingCounter;
         public int LoadingCounter
         {
-            get { return loadingCounter; }
+            get { return _loadingCounter; }
             set
             {
-                loadingCounter = value;
-                if (value != loadingCounter)
+              
+                if (value != _loadingCounter)
                 {
-                    loadingCounter = value;
-                    // NotifyPropertyChanged();
+                    _loadingCounter = value;
+                
                 }
-                if (loadingCounter < 0)
-                    loadingCounter = 0;
+                if (_loadingCounter < 0)
+                    _loadingCounter = 0;
 
-                IsLoading = loadingCounter > 0;
+                IsLoading = _loadingCounter > 0;
             }
         }
 
-        bool isLoading = false;
+        bool _isLoading;
         public bool IsLoading
         {
-            get { return isLoading; }
+            get { return _isLoading; }
             set
             {
 
-                isLoading = value;
+                _isLoading = value;
                 NotifyPropertyChanged();
 
             }

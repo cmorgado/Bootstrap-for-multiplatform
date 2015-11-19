@@ -18,7 +18,7 @@ namespace Bootstrap.PlatformSpecific.Services
             }
         }
 
-        public string appVersion
+        public string AppVersion
         {
             get
             {
@@ -31,7 +31,7 @@ namespace Bootstrap.PlatformSpecific.Services
             }
         }
 
-        public string deviceID
+        public string DeviceId
         {
             get
             {
@@ -44,7 +44,7 @@ namespace Bootstrap.PlatformSpecific.Services
             }
         }
 
-        public string deviceName
+        public string DeviceName
         {
             get
             {
@@ -57,7 +57,7 @@ namespace Bootstrap.PlatformSpecific.Services
             }
         }
 
-        public string OSName
+        public string OsName
         {
             get
             {
@@ -65,7 +65,7 @@ namespace Bootstrap.PlatformSpecific.Services
             }
         }
 
-        public string OSVersion
+        public string OsVersion
         {
             get
             {

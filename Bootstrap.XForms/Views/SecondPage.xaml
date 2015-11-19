@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="Bootstrap.XForms.Views.Home"
+<ContentPage x:Class="Bootstrap.XForms.Views.SecondPage"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors">
-
     <b:Interaction.Behaviors>
         <b:BehaviorCollection>
             <b:EventToCommand Command="{Binding Load}" EventName="Appearing" />
@@ -13,6 +12,9 @@
         <Label HorizontalOptions="Center"
                Text="{Binding PageTitle}"
                VerticalOptions="Center" />
-        <Button Command="{Binding GotoPageBCommand}" Text="Got To Another Page" />
+        <Label HorizontalOptions="Center"
+               Text="{Binding ReceivedMessage}"
+               VerticalOptions="Center" />
     </StackLayout>
+
 </ContentPage>

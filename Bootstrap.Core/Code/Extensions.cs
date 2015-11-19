@@ -1,9 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -11,7 +8,7 @@ namespace Bootstrap.Core.Code
 {
     public static class AsyncHelper
     {
-        private static readonly TaskFactory _myTaskFactory = new
+        private static readonly TaskFactory MyTaskFactory = new
             TaskFactory(CancellationToken.None,
                 TaskCreationOptions.None,
                 TaskContinuationOptions.None,
@@ -19,7 +16,7 @@ namespace Bootstrap.Core.Code
 
         public static TResult RunSync<TResult>(Func<Task<TResult>> func)
         {
-            return AsyncHelper._myTaskFactory
+            return MyTaskFactory
                 .StartNew<Task<TResult>>(func)
                 .Unwrap<TResult>()
                 .GetAwaiter()
@@ -28,7 +25,7 @@ namespace Bootstrap.Core.Code
 
         public static void RunSync(Func<Task> func)
         {
-            AsyncHelper._myTaskFactory
+            MyTaskFactory
                 .StartNew<Task>(func)
                 .Unwrap()
                 .GetAwaiter()
@@ -37,8 +34,13 @@ namespace Bootstrap.Core.Code
     }
     public static class Extensions
     {
-       
 
+        public static string ConvertToString(this Enum eff)
+        {
+
+            return Enum.GetName(eff.GetType(), eff);
+
+        }
         public static string ToJson(this object objectToSave)
         {
             try

@@ -1,5 +1,4 @@
 ﻿using GalaSoft.MvvmLight.Ioc;
-using GalaSoft.MvvmLight.Views;
 using Microsoft.Practices.ServiceLocation;
 
 namespace Bootstrap.MVVM.ViewModels
@@ -13,14 +12,13 @@ namespace Bootstrap.MVVM.ViewModels
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
-            //nav.Configure(HomePage, typeof(Views.Home));
+            SimpleIoc.Default.Register<Frame.Home>();
+            SimpleIoc.Default.Register<Frame.SecondPage>();
 
-            SimpleIoc.Default.Register<ViewModels.Frame.Home>();
-            //SimpleIoc.Default.Register<INavigationService>(() => nav);
         }
 
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Justification = "This non-static member is needed for data binding purposes.")]
-        public ViewModels.Frame.Home Home => ServiceLocator.Current.GetInstance<ViewModels.Frame.Home>();
+        public Frame.Home Home => ServiceLocator.Current.GetInstance<Frame.Home>();
+        public Frame.SecondPage SecondPage => ServiceLocator.Current.GetInstance<Frame.SecondPage>();
     }
 }

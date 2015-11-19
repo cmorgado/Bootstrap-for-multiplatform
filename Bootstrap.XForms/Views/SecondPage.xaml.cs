@@ -8,16 +8,13 @@ using Xamarin.Forms;
 
 namespace Bootstrap.XForms.Views
 {
-    public partial class Home : ContentPage
+    public partial class SecondPage : ContentPage
     {
-        public Home()
+        public SecondPage()
         {
             InitializeComponent();
 
-            BindingContext = App.Locator.Home;
-
-         
+            BindingContext = App.Locator.SecondPage;
         }
-
     }
 }
