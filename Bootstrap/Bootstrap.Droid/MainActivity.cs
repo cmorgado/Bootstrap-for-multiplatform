@@ -13,19 +13,19 @@ namespace Bootstrap.Droid
         protected override void OnCreate(Bundle bundle)
         {
 
-      
+            base.OnCreate(bundle);
+
 
 
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
+            Code.RegisterPagesNavigation.Run();
 
-          
-            RegisterIoC.Run();  Code.RegisterPagesNavigation.Run();
+            RegisterIoC.Run();
             Xamarin.Forms.Forms.Init(this, bundle);
 
 
             LoadApplication(new XForms.App());
 
-            base.OnCreate(bundle);
 
         }
     }
