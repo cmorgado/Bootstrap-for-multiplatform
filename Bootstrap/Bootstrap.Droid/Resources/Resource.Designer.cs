@@ -322,7 +322,7 @@ namespace Bootstrap.Droid
 			global::Xamarin.Forms.Platform.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::Bootstrap.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
 			global::Xamarin.Forms.Platform.Resource.Color.abc_background_cache_hint_selector_material_dark = global::Bootstrap.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
 			global::Xamarin.Forms.Platform.Resource.Color.abc_background_cache_hint_selector_material_light = global::Bootstrap.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
-			//global::Xamarin.Forms.Platform.Resource.Color.abc_color_highlight_material = global::Bootstrap.Droid.Resource.Color.abc_color_highlight_material;
+		//	global::Xamarin.Forms.Platform.Resource.Color.abc_color_highlight_material = global::Bootstrap.Droid.Resource.Color.abc_color_highlight_material;
 			global::Xamarin.Forms.Platform.Resource.Color.abc_input_method_navigation_guard = global::Bootstrap.Droid.Resource.Color.abc_input_method_navigation_guard;
 			global::Xamarin.Forms.Platform.Resource.Color.abc_primary_text_disable_only_material_dark = global::Bootstrap.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
 			global::Xamarin.Forms.Platform.Resource.Color.abc_primary_text_disable_only_material_light = global::Bootstrap.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
@@ -837,10 +837,10 @@ namespace Bootstrap.Droid
 			global::Xamarin.Forms.Platform.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::Bootstrap.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_V21_Theme_AppCompat_Light = global::Bootstrap.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::Bootstrap.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
-			//global::Xamarin.Forms.Platform.Resource.Style.Base_V22_Theme_AppCompat = global::Bootstrap.Droid.Resource.Style.Base_V22_Theme_AppCompat;
-			//global::Xamarin.Forms.Platform.Resource.Style.Base_V22_Theme_AppCompat_Light = global::Bootstrap.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
-			//global::Xamarin.Forms.Platform.Resource.Style.Base_V23_Theme_AppCompat = global::Bootstrap.Droid.Resource.Style.Base_V23_Theme_AppCompat;
-			//global::Xamarin.Forms.Platform.Resource.Style.Base_V23_Theme_AppCompat_Light = global::Bootstrap.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+		//	global::Xamarin.Forms.Platform.Resource.Style.Base_V22_Theme_AppCompat = global::Bootstrap.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+		//	global::Xamarin.Forms.Platform.Resource.Style.Base_V22_Theme_AppCompat_Light = global::Bootstrap.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+		//	global::Xamarin.Forms.Platform.Resource.Style.Base_V23_Theme_AppCompat = global::Bootstrap.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+		//	global::Xamarin.Forms.Platform.Resource.Style.Base_V23_Theme_AppCompat_Light = global::Bootstrap.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_V7_Theme_AppCompat = global::Bootstrap.Droid.Resource.Style.Base_V7_Theme_AppCompat;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::Bootstrap.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_V7_Theme_AppCompat_Light = global::Bootstrap.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
@@ -1789,7 +1789,7 @@ namespace Bootstrap.Droid
 			global::XLabs.Forms.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::Bootstrap.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
 			global::XLabs.Forms.Resource.Color.abc_background_cache_hint_selector_material_dark = global::Bootstrap.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
 			global::XLabs.Forms.Resource.Color.abc_background_cache_hint_selector_material_light = global::Bootstrap.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
-			//global::XLabs.Forms.Resource.Color.abc_color_highlight_material = global::Bootstrap.Droid.Resource.Color.abc_color_highlight_material;
+		//	global::XLabs.Forms.Resource.Color.abc_color_highlight_material = global::Bootstrap.Droid.Resource.Color.abc_color_highlight_material;
 			global::XLabs.Forms.Resource.Color.abc_input_method_navigation_guard = global::Bootstrap.Droid.Resource.Color.abc_input_method_navigation_guard;
 			global::XLabs.Forms.Resource.Color.abc_primary_text_disable_only_material_dark = global::Bootstrap.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
 			global::XLabs.Forms.Resource.Color.abc_primary_text_disable_only_material_light = global::Bootstrap.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
@@ -2007,7 +2007,7 @@ namespace Bootstrap.Droid
 			global::XLabs.Forms.Resource.Drawable.abc_cab_background_internal_bg = global::Bootstrap.Droid.Resource.Drawable.abc_cab_background_internal_bg;
 			global::XLabs.Forms.Resource.Drawable.abc_cab_background_top_material = global::Bootstrap.Droid.Resource.Drawable.abc_cab_background_top_material;
 			global::XLabs.Forms.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::Bootstrap.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
-			//global::XLabs.Forms.Resource.Drawable.abc_control_background_material = global::Bootstrap.Droid.Resource.Drawable.abc_control_background_material;
+		//	global::XLabs.Forms.Resource.Drawable.abc_control_background_material = global::Bootstrap.Droid.Resource.Drawable.abc_control_background_material;
 			global::XLabs.Forms.Resource.Drawable.abc_dialog_material_background_dark = global::Bootstrap.Droid.Resource.Drawable.abc_dialog_material_background_dark;
 			global::XLabs.Forms.Resource.Drawable.abc_dialog_material_background_light = global::Bootstrap.Droid.Resource.Drawable.abc_dialog_material_background_light;
 			global::XLabs.Forms.Resource.Drawable.abc_edit_text_material = global::Bootstrap.Droid.Resource.Drawable.abc_edit_text_material;
@@ -2400,10 +2400,10 @@ namespace Bootstrap.Droid
 			global::XLabs.Forms.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::Bootstrap.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
 			global::XLabs.Forms.Resource.Style.Base_V21_Theme_AppCompat_Light = global::Bootstrap.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
 			global::XLabs.Forms.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::Bootstrap.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
-			//global::XLabs.Forms.Resource.Style.Base_V22_Theme_AppCompat = global::Bootstrap.Droid.Resource.Style.Base_V22_Theme_AppCompat;
-			//global::XLabs.Forms.Resource.Style.Base_V22_Theme_AppCompat_Light = global::Bootstrap.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
-			//global::XLabs.Forms.Resource.Style.Base_V23_Theme_AppCompat = global::Bootstrap.Droid.Resource.Style.Base_V23_Theme_AppCompat;
-			//global::XLabs.Forms.Resource.Style.Base_V23_Theme_AppCompat_Light = global::Bootstrap.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+		//	global::XLabs.Forms.Resource.Style.Base_V22_Theme_AppCompat = global::Bootstrap.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+		//	global::XLabs.Forms.Resource.Style.Base_V22_Theme_AppCompat_Light = global::Bootstrap.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+		//	global::XLabs.Forms.Resource.Style.Base_V23_Theme_AppCompat = global::Bootstrap.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+		//	global::XLabs.Forms.Resource.Style.Base_V23_Theme_AppCompat_Light = global::Bootstrap.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
 			global::XLabs.Forms.Resource.Style.Base_V7_Theme_AppCompat = global::Bootstrap.Droid.Resource.Style.Base_V7_Theme_AppCompat;
 			global::XLabs.Forms.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::Bootstrap.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
 			global::XLabs.Forms.Resource.Style.Base_V7_Theme_AppCompat_Light = global::Bootstrap.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
