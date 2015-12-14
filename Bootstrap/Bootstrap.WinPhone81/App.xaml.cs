@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using GalaSoft.MvvmLight.Ioc;
+using Microsoft.Practices.ServiceLocation;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
@@ -35,6 +37,10 @@ namespace Bootstrap.WinPhone81
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
+
+            ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
+            Code.RegisterPagesNavigation.Run();
+            Common.Code.RegisterIoC.Run();
         }
 
         /// <summary>
@@ -66,6 +72,7 @@ namespace Bootstrap.WinPhone81
 
                 // Set the default language
                 rootFrame.Language = Windows.Globalization.ApplicationLanguages.Languages[0];
+                Xamarin.Forms.Forms.Init(e);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

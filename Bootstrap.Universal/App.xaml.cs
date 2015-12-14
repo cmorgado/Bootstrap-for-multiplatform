@@ -30,6 +30,8 @@ namespace Bootstrap.Universal
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            Code.RegisterPagesNavigation.Run();
+            Common.Code.RegisterIoC.Run();
         }
 
         /// <summary>
